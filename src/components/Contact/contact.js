@@ -8,7 +8,7 @@ const Contact = ({ title, subtitle, id }) => {
       <div className="content-container">
         <h2>{title}</h2>
         <p>{subtitle}</p>
-        <form name="contact" netlify>
+        <form name="contact" netlify="true">
           <div className="input-area">
             <input
               type="text"
@@ -17,7 +17,7 @@ const Contact = ({ title, subtitle, id }) => {
               required
               autoComplete="off"
             />
-            <label className="label-name" for="name">
+            <label className="label-name" htmlFor="name">
               <span className="content-name">Name</span>
             </label>
           </div>
@@ -30,7 +30,7 @@ const Contact = ({ title, subtitle, id }) => {
               required
               autoComplete="off"
             />
-            <label className="label-name" for="email">
+            <label className="label-name" htmlFor="email">
               <span className="content-name">Email</span>
             </label>
           </div>
@@ -44,7 +44,7 @@ const Contact = ({ title, subtitle, id }) => {
               autoComplete="off"
               aria-label="Message"
             />
-            <label className="label-name" for="message">
+            <label className="label-name" htmlFor="message">
               <span className="content-name">Message</span>
             </label>
           </div>
