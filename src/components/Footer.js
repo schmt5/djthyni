@@ -28,15 +28,15 @@ const Footer = () => {
   return (
     <FooterStyles>
       <div className="flex">
-        <div style={{paddingRight: 16}} className="brand-cont">
+        <div style={{ paddingRight: 16 }} className="brand-cont">
           <h1 style={{ margin: 0, marginBottom: 6 }}>THYNI</h1>
-          <address style={{fontSize: 12}}>
+          <address style={{ fontSize: 12 }}>
             Unfortunately, due to too many fan letters, we can no longer provide a phone number. Please contact us via E-mail
             </address>
         </div>
 
         {mainMenuItems || socialMenuItems || footerMenuItems ? (
-          <div style={{justifyContent: 'flex-start'}} className="menus-cont">
+          <div style={{ justifyContent: 'flex-start' }} className="menus-cont">
             {/* If social menu items are being imported, render this */}
             {socialMenuItems && (
               <ul className="footer-menu socials">
@@ -62,40 +62,32 @@ const Footer = () => {
 
         <div className="copy-cont">
           <ul className="copy">
-            <li style={{fontSize: 16}}>&copy; {new Date().getFullYear()}</li>
+            <li style={{ fontSize: 16 }}>&copy; {new Date().getFullYear()}</li>
 
             {/* if there is an author stated in the config, render this */}
-              <li style={{fontSize: 16}}>
-                <a
-                  href={'https://www.thierryschmidt.ch/'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {'✌️ Thierry Schmidt'}
-                </a>
-              </li>
+            <li style={{ fontSize: 16 }}>
+              <a
+                href={'https://www.thierryschmidt.ch/'}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {'✌️ Thierry Schmidt'}
+              </a>
+            </li>
+            <li style={{ fontSize: 16 }}>
+              <a
+                href={'https://www.genauglich.ch/'}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {'✌️ Nico Stähli'}
+              </a>
+            </li>
           </ul>
         </div>
-
-        <div style={{padding: 0, margin: 0, marginTop: 12}} className="copy-cont">
-          <ul className="copy">
-            <li>Gatsby Starter</li>
-
-            {/* if there is an author stated in the config, render this */}
-            {footerData.author && (
-              <li>
-
-                <a
-                  href={footerData.authorSite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {footerData.author}
-                </a>
-              </li>
-            )}
-          </ul>
-        </div>
+        {footerData.author && (
+          <span style={{margin: '12px auto', fontSize: 12}}>Gatsby Starter {footerData.author}</span>
+        )}
       </div>
     </FooterStyles>
   )
