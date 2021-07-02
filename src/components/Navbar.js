@@ -8,10 +8,15 @@ const Navbar = ({ Logo }) => {
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
+
+  const handleScroll = (path) => {
+    const target = document.querySelector(path);
+    target.scrollIntoView({block: "start", behavior: "smooth"});
+  }
   return (
     <NavStyles>
       <div className="masthead flex-container">
-        <img src={Logo} alt="Startup Logo" />
+        <h1 style={{margin: 0}}>THYNI</h1>
         <button
           className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
           type="button"
@@ -27,7 +32,7 @@ const Navbar = ({ Logo }) => {
         {mainMenuItems.map((item, index) => {
           return (
             <li key={index}>
-              <a href="#">{item.text}</a>
+              <button style={{backgroundColor: 'transparent', border: 0, color: 'white', cursor: 'pointer'}} onClick={() => handleScroll(item.path)}>{item.text}</button>
             </li>
           )
         })}

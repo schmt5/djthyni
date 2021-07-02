@@ -8,9 +8,9 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: "Startup",
-    titleTemplate: "%s | Helping startups get started",
-    description: "A simple one-page site for new businesses that uses GatsbyJS",
+    title: "THINI",
+    titleTemplate: "%s | Party hard",
+    description: "DJ THYNI Offical is a dj crew from Switzerland for the world",
     siteUrl: "https://thestartup.netlify.com",
     author: "Morgan Baker",
     authorSite: "https://www.morganbaker.dev",
@@ -30,5 +30,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-image`,
   ],
 }

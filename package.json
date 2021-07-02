@@ -1,8 +1,8 @@
 {
-  "name": "startup",
+  "name": "thyni",
   "private": false,
-  "description": "A startup template perfect for brochure sites and small businesses",
-  "version": "0.1.0",
+  "description": "THYNI offical DJ web site",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bagseye/startup"
+    "url": "https://github.com/schmt5/djthyni"
   },
   "bugs": {
-    "url": "https://github.com/bagseye/startup/issues"
+    "url": "https://github.com/schmt5/djthyni/issues"
   }
 }

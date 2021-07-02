@@ -8,7 +8,7 @@ import {
 import styled from "styled-components"
 import PropTypes from "prop-types"
 
-const Footer = ({ Logo }) => {
+const Footer = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -28,56 +28,15 @@ const Footer = ({ Logo }) => {
   return (
     <FooterStyles>
       <div className="flex">
-        {Logo ? (
-          <div className="brand-cont">
-            {/* If there is a logo, render this */}
-            {Logo && (
-              <Link to="/">
-                <img src={Logo} alt={`${footerData.title} logo`} />
-              </Link>
-            )}
-            <address>
-              85 Simone Weil Avenue
-              <br />
-              Watton-at-Stone
-              <br />
-              SG14 8BL
+        <div style={{paddingRight: 16}} className="brand-cont">
+          <h1 style={{ margin: 0, marginBottom: 6 }}>THYNI</h1>
+          <address style={{fontSize: 12}}>
+            Unfortunately, due to too many fan letters, we can no longer provide a phone number. Please contact us via E-mail
             </address>
-            <a className="telephone" href="tel:+004407076009211">
-              07076 009 211
-            </a>
-          </div>
-        ) : null}
+        </div>
 
         {mainMenuItems || socialMenuItems || footerMenuItems ? (
-          <div className="menus-cont">
-            {/* If main menu items are being imported, render this */}
-            {mainMenuItems && (
-              <ul className="footer-menu">
-                {/* First we want to filter out the Home menu item, then display the rest of them */}
-                {mainMenuItems
-                  .filter(item => {
-                    return item.title !== "home"
-                  })
-                  .map((item, index) => (
-                    <li key={`menuItem${index}`}>
-                      <Link to={item.path}>{item.title}</Link>
-                    </li>
-                  ))}
-              </ul>
-            )}
-
-            {/* If footer menu items are being imported, render this */}
-            {footerMenuItems && (
-              <ul className="footer-menu">
-                {footerMenuItems.map((item, index) => (
-                  <li key={`footerMenuItem${index}`}>
-                    <Link to={item.path}>{item.title}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-
+          <div style={{justifyContent: 'flex-start'}} className="menus-cont">
             {/* If social menu items are being imported, render this */}
             {socialMenuItems && (
               <ul className="footer-menu socials">
@@ -100,13 +59,32 @@ const Footer = ({ Logo }) => {
           </div>
         ) : null}
 
+
         <div className="copy-cont">
           <ul className="copy">
-            <li>&copy; {new Date().getFullYear()}</li>
+            <li style={{fontSize: 16}}>&copy; {new Date().getFullYear()}</li>
+
+            {/* if there is an author stated in the config, render this */}
+              <li style={{fontSize: 16}}>
+                <a
+                  href={'https://www.thierryschmidt.ch/'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {'✌️ Thierry Schmidt'}
+                </a>
+              </li>
+          </ul>
+        </div>
+
+        <div style={{padding: 0, margin: 0, marginTop: 12}} className="copy-cont">
+          <ul className="copy">
+            <li>Gatsby Starter</li>
 
             {/* if there is an author stated in the config, render this */}
             {footerData.author && (
               <li>
+
                 <a
                   href={footerData.authorSite}
                   target="_blank"
@@ -129,7 +107,7 @@ Footer.propTypes = {
 
 const FooterStyles = styled.footer`
   padding: calc(var(--spacing) * 2);
-  background-color: var(--black);
+  background-color: #015871;
   font-family: var(--sansSerif);
   font-weight: 300;
   font-style: normal;

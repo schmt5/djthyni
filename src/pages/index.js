@@ -9,10 +9,6 @@ import Package from "../components/Package/package"
 import Contact from "../components/Contact/contact"
 import { Link } from "react-scroll"
 
-import perk1Img from "../images/speed.svg"
-import perk2Img from "../images/piggy-bank.svg"
-import perk3Img from "../images/friendly-staff.svg"
-
 import { IconContext } from "react-icons"
 import { MdDone, MdClear } from "react-icons/md"
 
@@ -22,44 +18,23 @@ const HomePage = () => {
       <Banner />
       <TextBlock
         id="about"
-        title="Developing a new business is never easy, but Startup is here to help"
-        paragraph="With a super-fast Gatsby powered website you have the perfect platform to get your idea off the ground. Its the perfect template to help turn your idea into a reality."
+        title="Usually worldwide, currently in Bern 🐻"
+        paragraph="Meet the top of the DJ scene in your city. With THYNI you feirst until the clouds are purple again"
       >
-        <Link to="perks" smooth={true} duration={500}>
-          <Button label="Tell Me More" cta="Tell Me More!" />
-        </Link>
       </TextBlock>
-      <TextBlockImg
-        id="perks"
-        title="We have the tools to help you suceed"
-        subtitle="Startup is perfect for helping to to start and grow your business. As
-          you begin to gain new clients and expand you will see the benefits of
-          a super-fast Gatsby website"
+
+      <TextBlock
+        id="alongEvents"
+        title="Fingerliking good food from along events 🌮"
+        paragraph="Our beloved partner for events. Planning, organizing, cleaning up and designing the invitations - it's all included"
       >
-        <div className="flex-container trio-block">
-          <Perk
-            img={perk1Img}
-            alt="Super fast speed increases"
-            title="Speedy"
-            content="Super-fast response times ensure your business is not affected"
-          />
-          <Perk
-            img={perk2Img}
-            alt="Great savings to be made"
-            title="Affordable"
-            content="A choice of packages to suit every business type and size"
-          />
-          <Perk
-            img={perk3Img}
-            alt="Super fast speed increases"
-            title="Friendly"
-            content="Advisors who are available 24/7, all with exprt knowledge"
-          />
-        </div>
-      </TextBlockImg>
+        <a style={{color: 'white', display: 'block' ,marginTop: -24, fontSize: 17.6}} target="_blank" href={'https://www.alongevents.ch/'}>along events</a>
+      </TextBlock>
+    
       <Packages
-        title="Our Packages"
-        para="Choose the perfect solution for you. With benefits to suit all budgets Startup can offer amazing value and expert advice"
+        id="packages"
+        title="Our Packages - Your Party 🎉"
+        para="Choose a package that suits you best"
       >
         <IconContext.Provider
           value={{
@@ -71,19 +46,19 @@ const HomePage = () => {
           <Package title="Standard">
             <ul>
               <li>
-                <MdDone />1 User
+                <MdDone />Music all night long
               </li>
               <li>
                 <MdDone />
-                1GB Storage
+                1 Hours of gig
               </li>
               <li className="linethrough">
                 <MdClear color="red" />
-                Dedicated Advisor
+                Autograph session
               </li>
               <li className="linethrough">
                 <MdClear color="red" />
-                24/7 Support
+                Interview and photo session
               </li>
             </ul>
             <Link to="contact" smooth={true} duration={500}>
@@ -94,19 +69,19 @@ const HomePage = () => {
             <ul>
               <li>
                 <MdDone />
-                24/7 Support
+                Music all night long
               </li>
               <li>
                 <MdDone />
-                Dedicated Advisor
+                2 Hours of gig
               </li>
               <li>
                 <MdDone />
-                Unlimited Storage
+                Autograph session
               </li>
               <li>
                 <MdDone />
-                Unlimited Users
+                Interview and photo session
               </li>
             </ul>
             <Link to="contact" smooth={true} duration={500}>
@@ -117,19 +92,19 @@ const HomePage = () => {
             <ul>
               <li>
                 <MdDone />
-                10 Users
+                Music all night long
               </li>
               <li>
                 <MdDone />
-                500GB Storage
+                2 Hours of gig
               </li>
               <li>
                 <MdDone />
-                Advice Support
+                Autograph session
               </li>
               <li className="linethrough">
                 <MdClear color="red" />
-                Dedicated Advisor
+                Interview and photo session
               </li>
             </ul>
             <Link to="contact" smooth={true} duration={500}>
@@ -140,8 +115,8 @@ const HomePage = () => {
       </Packages>
       <Contact
         id="contact"
-        title="Contact Startup today and see how we can help your business grow"
-        subtitle="Every second counts when you're looking to get your new business started. Drop Startup a message and one of our representatives will be in contact"
+        title="Contact THINY Management today. "
+        subtitle="We are looking forward to your message"
       />
     </>
   )

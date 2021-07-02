@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-const Packages = ({ title, para, children }) => {
+const Packages = ({id, title, para, children }) => {
   return (
     <PackagesWrapper>
-      <div className="text-area">
+      <div id={id} className="text-area">
         <h2>{title}</h2>
         <p>{para}</p>
       </div>

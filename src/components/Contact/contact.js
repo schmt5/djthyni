@@ -49,7 +49,7 @@ const Contact = ({ title, subtitle, id }) => {
             </label>
           </div>
 
-          <div className="input-area button-area">
+          <div style={{paddingTop: 32, paddingBottom: 32}} className="input-area button-area">
             <Button label="Send Contact Form" cta="Send" type="submit" />
           </div>
         </form>
