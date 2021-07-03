@@ -25,7 +25,7 @@ const HomePage = () => {
 
       <TextBlock
         id="alongEvents"
-        title="Fingerliking good food from along events 🌮"
+        title="Finger likin good food from along events 🌮"
         paragraph="Our beloved partner for events. Planning, organizing, cleaning up and designing the invitations - it's all included"
       >
         <a style={{color: 'white', display: 'block' ,marginTop: -24, fontSize: 17.6}} target="_blank" href={'https://www.alongevents.ch/'}>along events</a>

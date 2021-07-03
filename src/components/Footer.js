@@ -67,6 +67,7 @@ const Footer = () => {
             {/* if there is an author stated in the config, render this */}
             <li style={{ fontSize: 16 }}>
               <a
+                style={{padding: 12}}
                 href={'https://www.thierryschmidt.ch/'}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -76,6 +77,7 @@ const Footer = () => {
             </li>
             <li style={{ fontSize: 16 }}>
               <a
+                style={{padding: 12}}
                 href={'https://www.genauglich.ch/'}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -261,8 +263,10 @@ const FooterStyles = styled.footer`
 
     .copy {
       display: flex;
+      flex-flow: column;
       padding: 0;
       margin-top: 0;
+      text-align: center;
 
       margin-bottom: 0;
 
@@ -271,6 +275,7 @@ const FooterStyles = styled.footer`
       }
 
       @media (min-width: 768px) {
+        flex-flow: row;
         justify-content: center;
 
         li {

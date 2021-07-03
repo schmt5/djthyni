@@ -12,6 +12,7 @@ const Navbar = ({ Logo }) => {
   const handleScroll = (path) => {
     const target = document.querySelector(path);
     target.scrollIntoView({block: "start", behavior: "smooth"});
+    toggleNav();
   }
   return (
     <NavStyles>
